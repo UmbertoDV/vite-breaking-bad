@@ -2,9 +2,7 @@
 // import HelloWorld from './components/HelloWorld.vue'
 export default {
 	data() {
-		return {
-			title: "Hello World",
-		};
+		return {};
 	},
 
 	// components:{

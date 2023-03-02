@@ -1,6 +1,6 @@
 <script>
 import ListCards from "./ListCards.vue";
-import ChoiceRace from "./ChoiceRace.vue";
+import ChoiceRace from "./ChoiceArchetype.vue";
 
 export default {
 	data() {
