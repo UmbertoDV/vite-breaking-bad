@@ -17,5 +17,8 @@
 @use "../assets/scss/partials/mixins" as *;
 .header {
 	@include flex("vertical");
+	img {
+		width: 200px;
+	}
 }
 </style>
