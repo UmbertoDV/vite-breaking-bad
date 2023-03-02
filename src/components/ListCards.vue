@@ -6,6 +6,7 @@ export default {
 	data() {
 		return {
 			cards: [],
+			allFoundCards: 0,
 		};
 	},
 
@@ -19,7 +20,8 @@ export default {
 			.then((response) => {
 				console.log(response);
 				this.cards = response.data.data;
-				console.log(this.cards);
+				// console.log(this.cards);
+				this.allFoundCards = this.cards.length;
 			});
 	},
 };
@@ -28,7 +30,7 @@ export default {
 <template>
 	<div class="container">
 		<div class="cards-founds">
-			<h5 class="my-0 p-4 fw-bold">Found 3 Cards</h5>
+			<h5 class="my-0 p-4 fw-bold">Found {{ allFoundCards }} Cards</h5>
 		</div>
 		<div class="row row-cols-5 align-items-stretch">
 			<AppCard v-for="(card, index) in cards" :card="card" :key="index" />
