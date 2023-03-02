@@ -5,6 +5,10 @@ export default {
 		return {};
 	},
 
+	props: {
+		card: Object,
+		key: Number,
+	},
 	// components:{
 	//	 HelloWorld,
 	// }
@@ -13,10 +17,10 @@ export default {
 
 <template>
 	<div class="text-center col d-flex flex-column py-3">
-		<img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="" />
+		<img :src="card.card_images" :alt="card.name" />
 		<div class="testo py-2">
-			<h2 class="my-2 fs-5">CELL BREEDIN</h2>
-			<span class="my-1">ALIEN</span>
+			<h2 class="my-2 fs-5">{{ card.name }}</h2>
+			<span class="my-1">{{ card.archetype }}</span>
 		</div>
 	</div>
 </template>

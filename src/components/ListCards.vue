@@ -31,7 +31,7 @@ export default {
 			<h5 class="my-0 p-4 fw-bold">Found 3 Cards</h5>
 		</div>
 		<div class="row row-cols-5 align-items-stretch">
-			<AppCard />
+			<AppCard v-for="(card, index) in cards" :card="card" :key="index" />
 		</div>
 	</div>
 </template>
